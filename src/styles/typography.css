@@ -1,0 +1,85 @@
+/* Body */
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-family: "Bangers", cursive;
+  font-weight: 400;
+
+  line-height: 1;
+  letter-spacing: .02em;
+
+  color: var(--color-ink);
+}
+
+/* Paragraphs */
+
+p {
+
+  color: var(--color-muted);
+
+  max-width: 65ch;
+}
+
+/* Links */
+
+a {
+
+  transition: color var(--transition-fast);
+}
+
+/* Labels */
+
+.label {
+
+  font-family: "JetBrains Mono", monospace;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+  font-size: .75rem;
+}
+
+/* Code */
+
+code,
+pre {
+
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Display */
+
+.display {
+
+  font-size: clamp(3.5rem, 9vw, 6rem);
+
+  text-shadow: 4px 4px 0 var(--color-red);
+}
+
+/* Section Title */
+
+.section-title {
+
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* Subtitle */
+
+.subtitle {
+
+  font-size: 1.125rem;
+}

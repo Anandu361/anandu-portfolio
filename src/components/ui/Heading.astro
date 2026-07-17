@@ -1,0 +1,23 @@
+---
+interface Props {
+  level?: 1 | 2 | 3 | 4;
+  subtitle?: string;
+  class?: string;
+}
+
+const {
+  level = 2,
+  subtitle,
+  class: className = "",
+} = Astro.props;
+
+const Tag = `h${level}` as keyof HTMLElementTagNameMap;
+---
+
+<div class={className}>
+  {subtitle && <p class="label mb-2">{subtitle}</p>}
+
+  <Tag class={level === 1 ? "display" : "section-title"}>
+    <slot />
+  </Tag>
+</div>

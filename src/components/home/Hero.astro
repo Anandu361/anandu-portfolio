@@ -1,0 +1,76 @@
+---
+import Container from "../ui/Container.astro";
+import Section from "../ui/Section.astro";
+import Heading from "../ui/Heading.astro";
+import Button from "../ui/Button.astro";
+---
+
+<Section id="hero" class="pt-8 pb-16">
+  <Container>
+
+    <div class="hero comic-panel">
+
+      <div class="hero__halftone halftone"></div>
+
+      <div class="hero__content">
+
+        <div>
+
+          <span class="comic-label">
+            SOFTWARE DEVELOPER • PORTFOLIO VOL. 1
+          </span>
+
+          <Heading
+            level={1}
+            class="mt-6"
+          >
+            Hi, I'm Anandu
+          </Heading>
+
+          <p class="hero__description">
+            I build scalable backend systems, modern web applications,
+            and AI-powered solutions with a focus on clean architecture
+            and great user experiences.
+          </p>
+
+          <div class="hero__tags">
+
+            <span class="comic-tag">DJANGO</span>
+
+            <span class="comic-tag">SPRING</span>
+
+            <span class="comic-tag">ASTRO</span>
+
+            <span class="comic-tag">POSTGRESQL</span>
+
+          </div>
+
+          <div class="hero__actions">
+
+            <Button href="#projects">
+              View Projects
+            </Button>
+
+            <Button
+              href="#contact"
+              variant="secondary"
+            >
+              Contact
+            </Button>
+
+          </div>
+
+        </div>
+
+        <div class="hero__image">
+
+          💻
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </Container>
+</Section>

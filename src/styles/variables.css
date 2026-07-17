@@ -1,0 +1,73 @@
+:root {
+
+  /* ===========================
+      COLORS
+  =========================== */
+
+  --color-bg: #F2EDE1;
+  --color-surface: #FFFDF8;
+
+  --color-ink: #1A1A1A;
+  --color-muted: #5C5C5C;
+
+  --color-yellow: #FFC93C;
+  --color-red: #E63946;
+  --color-blue: #2D6FE3;
+  --color-green: #47B16F;
+
+  /* ===========================
+      BORDERS
+  =========================== */
+
+  --border-width: 3px;
+  --border-color: var(--color-ink);
+
+  /* ===========================
+      RADIUS
+  =========================== */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  /* ===========================
+      SHADOWS
+  =========================== */
+
+  --shadow-comic: 8px 8px 0 var(--color-ink);
+
+  /* ===========================
+      LAYOUT
+  =========================== */
+
+  --container-width: 1200px;
+
+  /* ===========================
+      SPACING
+  =========================== */
+
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --space-8: 8rem;
+
+  /* ===========================
+      TRANSITIONS
+  =========================== */
+
+  --transition-fast: .15s ease;
+
+  --transition-normal: .25s ease;
+
+  /* ===========================
+      Z INDEX
+  =========================== */
+
+  --z-navbar: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+}

@@ -1,0 +1,33 @@
+---
+import Section from "../ui/Section.astro";
+import Container from "../ui/Container.astro";
+import Heading from "../ui/Heading.astro";
+import ProjectCard from "../project/ProjectCard.astro";
+import { projects } from "../../data/projects";
+---
+
+<Section id="projects" class="pb-10">
+  <Container>
+
+    <Heading subtitle="SECTION 01">
+      Featured Projects
+    </Heading>
+
+    <div class="projects-grid">
+    {
+        projects
+        .filter(project => project.featured)
+        .map(project => (
+            <ProjectCard
+            number={project.number}
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            href={project.href}
+            />
+        ))
+    }
+    </div>
+
+  </Container>
+</Section>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  color?: "yellow" | "blue" | "red" | "green";
+  class?: string;
+}
+
+const {
+  color = "yellow",
+  class: className = "",
+} = Astro.props;
+---
+
+<span class={`comic-tag comic-tag--${color} ${className}`}>
+  <slot />
+</span>

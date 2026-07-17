@@ -1,0 +1,40 @@
+---
+interface InfoItem {
+  label: string;
+  value: string | string[];
+}
+
+interface Props {
+  items: InfoItem[];
+  class?: string;
+}
+
+const {
+  items,
+  class: className = "",
+} = Astro.props;
+---
+
+<aside class={`comic-panel info-card ${className}`}>
+  {
+    items.map((item) => (
+      <div class="info-card__item">
+        <span class="info-card__label">
+          {item.label}
+        </span>
+
+        {Array.isArray(item.value) ? (
+          <ul class="info-card__list">
+            {item.value.map((value) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="info-card__value">
+            {item.value}
+          </p>
+        )}
+      </div>
+    ))
+  }
+</aside>

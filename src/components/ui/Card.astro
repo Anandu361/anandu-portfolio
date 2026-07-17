@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+}
+
+const {
+  class: className = "",
+} = Astro.props;
+---
+
+<article class={`comic-panel hover-lift ${className}`}>
+  <slot />
+</article>

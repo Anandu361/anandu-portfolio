@@ -1,0 +1,49 @@
+---
+import Card from "../ui/Card.astro";
+import Badge from "../ui/Badge.astro";
+
+interface Props {
+  number: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  href: string;
+}
+
+const {
+  number,
+  title,
+  description,
+  technologies,
+  href,
+} = Astro.props;
+---
+
+<Card class="project-card">
+
+  <span class="project-card__number">
+    PROJECT NO. {number}
+  </span>
+
+  <h3>{title}</h3>
+
+  <p>{description}</p>
+
+  <div class="project-card__stack">
+
+    {
+      technologies.map((tech) => (
+        <Badge>{tech}</Badge>
+      ))
+    }
+
+  </div>
+
+  <a
+    href={href}
+    class="project-card__link"
+  >
+    View Case Study →
+  </a>
+
+</Card>

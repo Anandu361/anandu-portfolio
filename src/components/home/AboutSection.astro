@@ -1,0 +1,44 @@
+---
+import Section from "../ui/Section.astro";
+import Container from "../ui/Container.astro";
+import Heading from "../ui/Heading.astro";
+import InfoCard from "../ui/InfoCard.astro";
+
+const info = [
+  {
+    label: "Location",
+    value: "Kerala, India",
+  },
+  {
+    label: "Backend",
+    value: ["Django", "Spring Boot"],
+  },
+  {
+    label: "Frontend",
+    value: ["Astro", "Next.js", "React"],
+  },
+  {
+    label: "Currently",
+    value: "Building EduCose CRM",
+  },
+];
+---
+
+<Section
+  id="about"
+  class="py-10"
+>
+  <Container>
+
+    <Heading subtitle="SECTION 02">
+      About Me
+    </Heading>
+
+    <div class="about-grid">
+
+      <InfoCard items={info} />
+
+    </div>
+
+  </Container>
+</Section>

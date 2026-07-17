@@ -1,0 +1,29 @@
+---
+interface Props {
+  href?: string;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary";
+  class?: string;
+}
+
+const {
+  href,
+  type = "button",
+  variant = "primary",
+  class: className = "",
+} = Astro.props;
+
+const classes = `comic-button comic-button--${variant} ${className}`;
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type} class={classes}>
+      <slot />
+    </button>
+  )
+}
