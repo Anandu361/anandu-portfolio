@@ -1,0 +1,31 @@
+---
+interface Props {
+  name: string;
+  category: string;
+  description?: string;
+}
+
+const {
+  name,
+  category,
+  description,
+} = Astro.props;
+---
+
+<article class="comic-panel tech-card">
+  <span class="comic-label">
+    {category}
+  </span>
+
+  <h3 class="tech-card__title">
+    {name}
+  </h3>
+
+  {
+    description && (
+      <p class="tech-card__description">
+        {description}
+      </p>
+    )
+  }
+</article>

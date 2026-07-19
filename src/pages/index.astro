@@ -3,12 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/home/Hero.astro";
 import ProjectsSection from "../components/home/ProjectsSection.astro";
 import AboutSection from "../components/home/AboutSection.astro";
+import SkillsSection from "../components/home/SkillsSection.astro";
+import Footer from "../components/layout/Footer.astro";
 ---
 
 <BaseLayout title="Anandu | Software Developer">
   <main>
     <Hero />
     <ProjectsSection />
-	<AboutSection/>
+	  <AboutSection/>
+    <SkillsSection />
+    <Footer/>
   </main>
 </BaseLayout>

@@ -472,3 +472,102 @@
 .info-card__list li {
   font-weight: 500;
 }
+
+/* ===========================
+    Tech Grid
+=========================== */
+
+.tech-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  transition: transform 0.2s ease;
+}
+
+.tech-card:hover {
+  transform: translate(-4px, -4px);
+}
+
+.tech-card__title {
+  margin: 0;
+
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+.tech-card__description {
+  margin: 0;
+
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ===========================
+    Footer
+=========================== */
+
+.cta-panel {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.cta-panel h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.cta-panel p {
+  max-width: 600px;
+  margin: 0;
+
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  border-top: 3px solid var(--color-ink);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  font-family: "JetBrains Mono", monospace;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

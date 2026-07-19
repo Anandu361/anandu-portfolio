@@ -1,0 +1,33 @@
+---
+import Section from "../ui/Section.astro";
+import Container from "../ui/Container.astro";
+import Heading from "../ui/Heading.astro";
+import TechCard from "../ui/TechCard.astro";
+
+import { skills } from "../../data/skills";
+---
+
+<Section
+  id="skills"
+  class="py-20"
+>
+  <Container>
+
+    <Heading subtitle="SECTION 03">
+      Tech Arsenal
+    </Heading>
+
+    <div class="tech-grid">
+      {
+        skills.map((skill) => (
+          <TechCard
+            name={skill.name}
+            category={skill.category}
+            description={skill.description}
+          />
+        ))
+      }
+    </div>
+
+  </Container>
+</Section>
